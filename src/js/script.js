@@ -1,6 +1,20 @@
-//  Obs. Esse script está sendo importado na tag <head></head>.
+//  O método text() equivale ao innerHTML do JS puro
+$("#bloco").click( () => {
+    $("#bloco-texto").text("Clicou");    
+});
 
-//  Seleciona o documento e adiciona uma arrow function que roda quando a página for carregada
-$(document).ready(() => {
-    $("#texto").text("Esse texto foi adicionado com jQuery")
+$("#bloco").mouseenter( () => {
+    $("#bloco-texto").text("Entrou");    
+});
+
+$("#bloco").mouseleave( () => {
+    $("#bloco-texto").text("Saiu");    
+});
+
+//  Seleciona o elemento de input e adiciona o evento de "keyup", sendo que toda vez que o evento é disparado, o valor do elemento de "#input-texto" é alterado pelo de valor de "#nome"
+$("#nome").keyup( () => {
+    $("#input-texto").text($("#nome").val())
 })
+
+
+
