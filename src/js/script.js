@@ -8,3 +8,9 @@ $("#bloco").on({
     mouseenter: () => {$("#bloco-texto").text("Entrou")},
     mouseleave: () => {$("#bloco-texto").text("Saiu")}
 });
+
+$("#bloco2").click( () => {
+
+    $("#bloco").trigger('click')
+
+})
