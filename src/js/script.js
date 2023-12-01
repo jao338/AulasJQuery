@@ -1,20 +1,10 @@
-//  O método text() equivale ao innerHTML do JS puro
-$("#bloco").click( () => {
-    $("#bloco-texto").text("Clicou");    
+//  Neste caso a função "on()" permite adicionar mais de um evento a um elemento, mas neste caso todos os eventos irão rodar o mesmo script
+$("#bloco").on("click dblclick", () => {
+    $("#bloco-texto").text("Um evento de clique foi adicionado");    
 });
 
-$("#bloco").mouseenter( () => {
-    $("#bloco-texto").text("Entrou");    
+$("#bloco").on({
+    click: () => {$("#bloco-texto").text("Clicou")},
+    mouseenter: () => {$("#bloco-texto").text("Entrou")},
+    mouseleave: () => {$("#bloco-texto").text("Saiu")}
 });
-
-$("#bloco").mouseleave( () => {
-    $("#bloco-texto").text("Saiu");    
-});
-
-//  Seleciona o elemento de input e adiciona o evento de "keyup", sendo que toda vez que o evento é disparado, o valor do elemento de "#input-texto" é alterado pelo de valor de "#nome"
-$("#nome").keyup( () => {
-    $("#input-texto").text($("#nome").val())
-})
-
-
-
