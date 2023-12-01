@@ -1,16 +1,6 @@
-//  Neste caso a função "on()" permite adicionar mais de um evento a um elemento, mas neste caso todos os eventos irão rodar o mesmo script
-$("#bloco").on("click dblclick", () => {
-    $("#bloco-texto").text("Um evento de clique foi adicionado");    
+//  Adiciona um evento ao documento que monitora a posição em X e Y do mouse
+$(document).mousemove( (event) => {
+
+    $("#texto").text("Mouse X: " + event.pageX + ", Mouse Y: " + event.pageY)
+
 });
-
-$("#bloco").on({
-    click: () => {$("#bloco-texto").text("Clicou")},
-    mouseenter: () => {$("#bloco-texto").text("Entrou")},
-    mouseleave: () => {$("#bloco-texto").text("Saiu")}
-});
-
-$("#bloco2").click( () => {
-
-    $("#bloco").trigger('click')
-
-})
