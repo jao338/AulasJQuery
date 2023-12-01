@@ -1,13 +1,5 @@
-//  Adiciona um evento de click ao elemento de "#texto1" que altera o texto do parágrafo "#resultado" com qual o nome do elemento de id "#texto1"
-$("#texto1").click( (event) => {
-
-    $("#resultado").text("O objeto que foi clicado foi: " + event.target.nodeName);
-
-});
-
-//  Adiciona um evento de click que altera o texto do parágrafo "#resultado" com qual elemento HTML foi clicado
-$(document).click( (event) => {
-
-    $("#resultado").text("O objeto que foi clicado foi: " + event.target.nodeName);
-
+//  "event.type" retorna o tipo de evento e "event.which" retorna quem disparou o evento
+$(document).on({
+    click: (event) => {$("#resultado").text("Tipo de evento: " + event.type + "- Quem disparou o evento: " + event.which)},
+    keydown: (event) => {$("#resultado").text("Tipo de evento: " + event.type + "- Quem disparou o evento: " + event.which)}
 });
