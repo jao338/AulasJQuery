@@ -3,14 +3,21 @@
     padding: 0;
 }
 
-#bloco{
-    width: 200px;
-    height: 200px;
-    background-color: #000;
+div{
+    border: 1px solid #f00;
+    padding: 8px;
 }
 
-#bloco2{
-    width: 200px;
-    height: 200px;
-    background-color: #f00;
+p{
+    border: 1px solid #00f;
+    padding: 8px;
 }
+
+span{
+    border: 1px solid #0f0;
+    padding: 8px;
+}
+
+/* 
+    rgb - "Vermelho - #f00", "Verde - #0f0" e "Azul - #00f" 
+*/

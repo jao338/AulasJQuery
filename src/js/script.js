@@ -1,5 +1,15 @@
-//  "event.type" retorna o tipo de evento e "event.which" retorna quem disparou o evento
-$(document).on({
-    click: (event) => {$("#resultado").text("Tipo de evento: " + event.type + "- Quem disparou o evento: " + event.which)},
-    keydown: (event) => {$("#resultado").text("Tipo de evento: " + event.type + "- Quem disparou o evento: " + event.which)}
+//  Evita que o(s) evento(s) se propagem. A propagação acontece quando um evento de um elemento filho é acionado pelo elemeno pai
+$("div").click( (event) => {
+    event.stopPropagation();
+    alert('Evento disparado na DIV')
+});
+
+$("p").click( (event) => {
+    event.stopPropagation();
+    alert('Evento disparado no P')
+});
+
+$("span").click( (event) => {
+    event.stopPropagation();
+    alert('Evento disparado no SPAN')
 });
