@@ -1,9 +1,12 @@
 //   O método "show()" exibe o elemento selecionado
-$("#btn-mostrar").click(function(){
-    $("#caixa").show()
+$("#btn-toggle").click(function(){
+    $("#caixa").toggle()
+
+    //  Se o elemento "#caixa" tiver a propriedade "visible"
+    if($("#caixa").is(':visible')){
+        $("#btn-toggle").text('Ocultar')
+    }else{
+        $("#btn-toggle").text('Mostrar')
+    }
 });
 
-//   O método "hide()" esconde o elemento selecionado
-$("#btn-ocultar").click(function(){
-    $("#caixa").hide()
-});
