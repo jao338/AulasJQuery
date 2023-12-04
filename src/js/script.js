@@ -1,15 +1,14 @@
-//  "this" retorna o alvo do evento
-//  O método "text()" retorna o texto do elemento
-$("h2").last().click(function(){
-    alert('Valor obtido usando "text()": ' + $(this).text())
-})
-
-//  O método "val()" retorna o valor interno de um elemento. Geralmente usado para recuperar dados de um input
-$("#nome").click(function(){
-    alert('Valor obtido usando "val()": ' + $(this).val())
-})
-
-//  O método "html()" retorna todo o conteúdo interno do elemento, inclusive as tags HTML.
+//  "this" retorna o próprio elemento selecionado
+//  O método "attr()" retorna o atributo especificado do elemento selecionado.
 $("#caixa").click(function(){
-    alert('Valor obtido usando "html()": ' + $(this).html())
-})
+    alert("Selecionando o id: " + $(this).attr('class'))
+});
+
+//   Ao passar mais um parâmetro para a função "attr()" alteramos o valor do atributo especificado
+$("#btn-red").click(function(){
+    $("#caixa").attr('class', 'vermelho')
+});
+
+$("#btn-blue").click(function(){
+    $("#caixa").attr('class', 'azul')
+});
