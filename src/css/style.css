@@ -3,16 +3,10 @@
     padding: 0;
 }
 
-.vermelho{
+.caixa{
     border: 1px solid #000;
     width: 200px;
     height: 200px;
-    background-color: #f00;
+    background-color: #aaa;
 }
 
-.azul{
-    border: 1px solid #000;
-    width: 200px;
-    height: 200px;
-    background-color: #00f;
-}
