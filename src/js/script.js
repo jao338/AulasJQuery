@@ -1,8 +1,5 @@
-//  Usa-se o "first()" para selecionar o primeiro elemento "p" e o "css()" para adicionar formatação
-$("p").first().css({"border" : "1px solid #f00", "background-color" : "#ffa"})
+//  Usa-se o "filter()" para selecionar todos os elementos "p" que possuem a classe "borda" e o "css()" para adicionar formatação
+$("p").filter(".borda").css({"color" : "#f00"})
 
-//  Usa-se o "last()" para selecionar o último elemento "p" e o "css()" para adicionar formatação
-$("p").last().css({"border" : "1px solid #f00", "background-color" : "#afa"})
-
-//  Usa-se o "eq()" para selecionar o elemento de index especificado em "eq(x)" e o "css()" para adicionar formatação
-$("p").eq(1).css({"border" : "1px solid #f00", "background-color" : "#aaf"})
+//  Usa-se o "not()" para selecionar todos os elementos "p" que não possuem a classe "borda" e o "css()" para adicionar formatação
+$("p").not(".borda").css({"color" : "#00f"})
