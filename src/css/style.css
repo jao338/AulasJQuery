@@ -2,9 +2,14 @@
     border: 1px solid #000;
     width: 200px;
     height: 200px;
-    background-color: #aaa;
+    background-color: #009;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: absolute;
-    left: 0px;
+    left: 20px;
     top: 50px;
+    padding: 8px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
