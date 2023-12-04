@@ -1,5 +1,15 @@
-//  Usa-se o "filter()" para selecionar todos os elementos "p" que possuem a classe "borda" e o "css()" para adicionar formatação
-$("p").filter(".borda").css({"color" : "#f00"})
+//  "this" retorna o alvo do evento
+//  O método "text()" retorna o texto do elemento
+$("h2").last().click(function(){
+    alert('Valor obtido usando "text()": ' + $(this).text())
+})
 
-//  Usa-se o "not()" para selecionar todos os elementos "p" que não possuem a classe "borda" e o "css()" para adicionar formatação
-$("p").not(".borda").css({"color" : "#00f"})
+//  O método "val()" retorna o valor interno de um elemento. Geralmente usado para recuperar dados de um input
+$("#nome").click(function(){
+    alert('Valor obtido usando "val()": ' + $(this).val())
+})
+
+//  O método "html()" retorna todo o conteúdo interno do elemento, inclusive as tags HTML.
+$("#caixa").click(function(){
+    alert('Valor obtido usando "html()": ' + $(this).html())
+})
