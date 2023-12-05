@@ -3,13 +3,35 @@
     padding: 0;
 }
 
-p{
-    padding: 16px;
+.menu{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
 }
 
-.caixa{
+#menus{
+    display: flex;
+    width: 100%;
+    background-color: #888;
+}
 
-    background-color: #f00;
-    width: 100px;
-    height: 100px;
+.btnMenu{
+    margin: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#controle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #888;
+    padding: 8px;
+    border-radius: 0 0 12px 12px;
+    margin-left: 12px;
+    margin-right: auto;
+}
+
+#controle button{
+    margin: 4px;
 }

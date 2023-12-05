@@ -1,29 +1,16 @@
-//  O método "queue()" é um método que retorna a fila de animações. Com a propriedadde "length" obtemos a quantidade de animações na fla
-//  Toda vez que uma animação terminar a função "text()" é chamada alterando o texto do elemento de id "info"
-const cx = $("#caixa");
+//  A função "slideUp()" oculta um ou vários elementos, deslizando para cima. Já a função "slideDown()" exibe um ou vários elementos, deslizando para baixo
+$("#btnCima").click(function () {
 
-$("#btnAumentar").click(function(){
-
-    $("#caixa").animate({width: "100%"}, {duration: 5000, complete: () => {
-        $("#info").text(cx.queue().length)
-    }})
-
-    $("#info").text(cx.queue().length)
-});
-
-$("#btnDiminuir").click(function(){
-
-    $("#caixa").animate({width: "100px"}, {duration: 5000, complete: () => {
-        $("#info").text(cx.queue().length)
-    }})
-
-    $("#info").text(cx.queue().length)
-});
-
-$("#btnFinalizar").click(function(){
-
-    $("#caixa").finish();
+    $("#menus").slideUp(1000, () => {
+        $("#msg").text('Menu oculto')
+    });
 
 });
 
+$("#btnBaixo").click(function () {
+    
+    $("#menus").slideDown(1000, () => {
+        $("#msg").text('Menu exibido')
+    });
 
+});
