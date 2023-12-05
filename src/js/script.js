@@ -1,19 +1,28 @@
-//  A função "stop()" recebe dois parametros do tipo boolean. Caso o primeiro parametro seja definido como "true", a fila de animações é limpa. E se caso o segundo parametro for "true", a animação pula para o final. Por padrão, ambos valores são "false".
-$("#btnAnimar").click(function() {
-    $("#caixa").animate({left: 800}, {duration: 2000})
-    $("#caixa").animate({top: 400}, {duration: 2000})
-    $("#caixa").animate({left: 0}, {duration: 2000})
-    $("#caixa").animate({top: 50}, {duration: 2000})
-})
+//  As funções "append()" e "appendTo()" adicionam um elemento a outro elemento.
+//  A diferença é que com o "append()", o argumento da função é o próprio elemento que será adicionado. Já no "appendTo()", o argumento é o elemento que receberá o outro elemento
 
-$("#btnProxima").click(function() {
-    $("#caixa").stop();
-})
+let r,g,b
 
-$("#btnParar").click(function() {
-    $("#caixa").stop(true, false);
-})
+$("#btnAdicionar").click(() => {
 
-$("#btnFim").click(function() {
-    $("#caixa").stop(false, true);  
-})
+    //  Define um número entre 0 e 1, multiplica por 255 e o arredonda para baixo
+    r = Math.floor(Math.random()*255)
+    g = Math.floor(Math.random()*255)
+    b = Math.floor(Math.random()*255)
+
+    $("#caixa").append("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'></div>")
+
+});
+
+$("#btnAdicionar5").click(() => {
+
+    for(let i = 0; i < 5; i++){
+
+        r = Math.floor(Math.random()*255)
+        g = Math.floor(Math.random()*255)
+        b = Math.floor(Math.random()*255)
+
+        $("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'></div>").appendTo($("#caixa"))
+    }
+
+});
