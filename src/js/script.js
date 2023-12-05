@@ -1,20 +1,20 @@
-//  Adiciona um evento de clique a todos os menus. O método "fadeToggle()" alterna a opacidade de elemento para 0 ou para 1
-$("#menuJquery").click(function(){
-    $("#submenuJquery").fadeToggle();
-    $("#submenuJquery").css({"display" : "flex"});
+//  A função "finish()" pula a animação para o final
+$("#btnAumentar").click(function(){
+
+    $("#caixa").animate({width: "100%"}, 5000)
+
 });
 
-$("#menuCanvas").click(function(){
-    $("#submenuCanvas").fadeToggle();
-    $("#submenuCanvas").css({"display" : "flex"});
+$("#btnDiminuir").click(function(){
+
+    $("#caixa").animate({width: "100px"}, 5000)
+
 });
 
-$("#menuPython").click(function(){
-    $("#submenuPython").fadeToggle();
-    $("#submenuPython").css({"display" : "flex"});
+$("#btnFinalizar").click(function(){
+
+    $("#caixa").finish();
+
 });
 
-$("#menuArduino").click(function(){
-    $("#submenuArduino").fadeToggle();
-    $("#submenuArduino").css({"display" : "flex"});
-});
+
