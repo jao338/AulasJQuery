@@ -1,37 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-.menu{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-}
-
-#menus{
-    display: flex;
-    width: 100%;
-    background-color: #888;
-}
-
-.btnMenu{
-    margin: 8px;
-    padding: 8px;
-    cursor: pointer;
-}
-
-#controle{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+#caixa{
     background-color: #f00;
-    padding: 8px;
-    border-radius: 0 0 12px 12px;
-    margin-left: 12px;
-    margin-right: auto;
-}
-
-#controle button{
-    margin: 4px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    top: 48px;
 }

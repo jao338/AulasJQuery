@@ -1,17 +1,19 @@
-//  A função "slideToggle()" exibe deslizando caso o(s) elemento(s) esteja(m) oculto(s) ou oculta o(s) elemento(s) caso esteja(m) visível(eis)
-$("#btnMenu").click(function () {
+//  A função "stop()" recebe dois parametros do tipo boolean. Caso o primeiro parametro seja definido como "true", a fila de animações é limpa. E se caso o segundo parametro for "true", a animação pula para o final. Por padrão, ambos valores são "false".
+$("#btnAnimar").click(function() {
+    $("#caixa").animate({left: 800}, {duration: 2000})
+    $("#caixa").animate({top: 400}, {duration: 2000})
+    $("#caixa").animate({left: 0}, {duration: 2000})
+    $("#caixa").animate({top: 50}, {duration: 2000})
+})
 
-    $("#menus").slideToggle(1000, () => {
-        
-        if($("#menus").is(":visible")){
+$("#btnProxima").click(function() {
+    $("#caixa").stop();
+})
 
-            $("#msg").text('Menu Exibido')
-            $("#controle").css({backgroundColor: "#f00"})
-        }else{
-            $("#msg").text('Menu Oculto')
-            $("#controle").css({backgroundColor: "#888"})
-        }
+$("#btnParar").click(function() {
+    $("#caixa").stop(true, false);
+})
 
-    });
-
-});
+$("#btnFim").click(function() {
+    $("#caixa").stop(false, true);  
+})
