@@ -1,10 +1,9 @@
-//  As funções "prepend()" e "prependTo()" adicionam um elemento ao INÍCIO de outro elemento.
-//  A diferença é que com o "prepend()", o argumento da função é o próprio elemento que será adicionado. Já no "prependTo()", o argumento é o elemento que receberá o outro elemento
+//  As função "before()" adiciona um elemento antes de outro elemento. Já a função "after()" adiciona depois de outro elemento
 
 let r,g,b
 let num = 0
 
-$("#btnAdicionar").click(() => {
+$("#btnAdicionarAntes").click(() => {
 
     //  Define um número entre 0 e 1, multiplica por 255 e o arredonda para baixo
     r = Math.floor(Math.random()*255)
@@ -13,11 +12,10 @@ $("#btnAdicionar").click(() => {
 
     num++
 
-    $("#caixa").prepend("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'>"+num+"</div>")
-
+    $("#caixa").before("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'>"+num+"</div>")
 });
 
-$("#btnAdicionar5").click(() => {
+$("#btnAdicionarDepois").click(() => {
 
     for(let i = 0; i < 5; i++){
 
@@ -27,7 +25,21 @@ $("#btnAdicionar5").click(() => {
 
         num++
 
-        $("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'>"+num+"</div>").prependTo($("#caixa"))
+        $("#caixa").after("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'>"+num+"</div>")
+    }
+
+});
+
+$("#btnAdicionarTextoAntes").click(() => {
+    
+    $("#caixa2").before(" Curso de jQuery ANTES")
+});
+
+$("#btnAdicionarTextoDepois").click(() => {
+
+    for(let i = 0; i < 5; i++){
+
+        $("#caixa2").after(" Curso de jQuery DEPOIS")
     }
 
 });
