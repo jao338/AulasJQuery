@@ -1,16 +1,17 @@
-//  A função "slideUp()" oculta um ou vários elementos, deslizando para cima. Já a função "slideDown()" exibe um ou vários elementos, deslizando para baixo
-$("#btnCima").click(function () {
+//  A função "slideToggle()" exibe deslizando caso o(s) elemento(s) esteja(m) oculto(s) ou oculta o(s) elemento(s) caso esteja(m) visível(eis)
+$("#btnMenu").click(function () {
 
-    $("#menus").slideUp(1000, () => {
-        $("#msg").text('Menu oculto')
-    });
+    $("#menus").slideToggle(1000, () => {
+        
+        if($("#menus").is(":visible")){
 
-});
+            $("#msg").text('Menu Exibido')
+            $("#controle").css({backgroundColor: "#f00"})
+        }else{
+            $("#msg").text('Menu Oculto')
+            $("#controle").css({backgroundColor: "#888"})
+        }
 
-$("#btnBaixo").click(function () {
-    
-    $("#menus").slideDown(1000, () => {
-        $("#msg").text('Menu exibido')
     });
 
 });
