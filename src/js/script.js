@@ -1,9 +1,20 @@
-//  Adiciona um evento de clique a todos os elementos que possuem a classe "itemMenu". Adicionano, também, um evento que é acionado quando o mouse está sobre o elemento.
-//  O método "fadeTo()" aplica uma animação de opacidade sobre o elemento. Recebendo dois argumentos, sendo o primeiro a duração(ms) e o segundo a opacidade(de 0.0 a 1.0)
-$(".itemMenu").mouseover(function() {
-    $(this).fadeTo(1000, 0.3)
-})
+//  Adiciona um evento de clique a todos os menus. O método "fadeToggle()" alterna a opacidade de elemento para 0 ou para 1
+$("#menuJquery").click(function(){
+    $("#submenuJquery").fadeToggle();
+    $("#submenuJquery").css({"display" : "flex"});
+});
 
-$(".itemMenu").mouseleave(function() {
-    $(this).fadeTo(1000, 1)
-})
+$("#menuCanvas").click(function(){
+    $("#submenuCanvas").fadeToggle();
+    $("#submenuCanvas").css({"display" : "flex"});
+});
+
+$("#menuPython").click(function(){
+    $("#submenuPython").fadeToggle();
+    $("#submenuPython").css({"display" : "flex"});
+});
+
+$("#menuArduino").click(function(){
+    $("#submenuArduino").fadeToggle();
+    $("#submenuArduino").css({"display" : "flex"});
+});
