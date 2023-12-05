@@ -1,7 +1,8 @@
-//  As funções "append()" e "appendTo()" adicionam um elemento a outro elemento.
-//  A diferença é que com o "append()", o argumento da função é o próprio elemento que será adicionado. Já no "appendTo()", o argumento é o elemento que receberá o outro elemento
+//  As funções "prepend()" e "prependTo()" adicionam um elemento ao INÍCIO de outro elemento.
+//  A diferença é que com o "prepend()", o argumento da função é o próprio elemento que será adicionado. Já no "prependTo()", o argumento é o elemento que receberá o outro elemento
 
 let r,g,b
+let num = 0
 
 $("#btnAdicionar").click(() => {
 
@@ -10,7 +11,9 @@ $("#btnAdicionar").click(() => {
     g = Math.floor(Math.random()*255)
     b = Math.floor(Math.random()*255)
 
-    $("#caixa").append("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'></div>")
+    num++
+
+    $("#caixa").prepend("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'>"+num+"</div>")
 
 });
 
@@ -22,7 +25,9 @@ $("#btnAdicionar5").click(() => {
         g = Math.floor(Math.random()*255)
         b = Math.floor(Math.random()*255)
 
-        $("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'></div>").appendTo($("#caixa"))
+        num++
+
+        $("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'>"+num+"</div>").prependTo($("#caixa"))
     }
 
 });
