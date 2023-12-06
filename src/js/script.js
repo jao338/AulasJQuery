@@ -1,25 +1,20 @@
-//  A função "detach()" remove um elemento e o armazena na memória
-let itens = $(".item")
-
-let i = 0
-
-$("#btnMudar").click(() => {
-
-    let item = $(itens[i]).detach();
-
-    i++;
-
-    $("#caixa2").append(item);
+//  A função "hasClass()" retorna true se o elemento selecionado posssui a classe especificada ou retorna false, caso o elemento não possua a classe.
+$(".btnFechar").click((event) => {
     
+    //  "event.targer.id" retorna o id do elemento que foi clicado. Usa-se o parente para selecionar o seu elemento pai 
+    $("#" + event.target.id).parent().addClass("ocultar")
+
 });
 
 $("#btnReset").click(() => {
     
-    for (let index = 0; index < itens.length; index++) {
+    let itens = $(".caixa")
 
-        let item = $(itens[index]).detach();
+    for (let index = 0; index < itens.length; index++) {
         
-        $("#caixa1").append(item);
+        if ($(itens[index]).hasClass("ocultar")) {
+            $(itens[index]).removeClass("ocultar")
+        }
     }
-    
+
 });
