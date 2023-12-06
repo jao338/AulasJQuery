@@ -1,21 +1,22 @@
-//  Com a função "css()" podemos recuperar ou alterar propriedades dos elementos
-//  Ao alterar uma(s) propriedade(S), usa-se uma chave. O primeiro valor é a propriedade que será alterada e o segundo valor é o valor que será atribuido a propriedade
-//  Utilize como parametro da função "css('propriedade')" o valor que deseja recuperar
+//  Use a função "removeClass()" para remover uma ou várias classes
+//  Use a função "addClass()" para adicionar uma ou várias classes
 $("#btnVerde").click(() => {
 
-    $("#caixa").css({"background-color":"#0f0", "color":"#f0f"})
+    $("#caixa").removeClass("azul vermelho")
+    $("#caixa").addClass("verde")
 
-    alert($("#caixa").css("background-color"))
 });
 
 $("#btnVermelho").click(() => {
 
-    $("#caixa").css({"background-color":"#f00", "color":"#0ff"})
+    $("#caixa").removeClass("verde azul")
+    $("#caixa").addClass("vermelho")
 
 });
 
 $("#btnAzul").click(() => {
 
-    $("#caixa").css({"background-color":"#00f", "color":"#ff0"})
+    $("#caixa").removeClass("verde vermelho")
+    $("#caixa").addClass("azul")
     
 });
