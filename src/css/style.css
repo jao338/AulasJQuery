@@ -11,3 +11,8 @@
     flex-wrap: wrap;
     box-sizing: border-box;
 }
+
+.borda{
+    border: 3px solid #000;
+    border-radius: 18px;
+}
