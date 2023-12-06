@@ -1,39 +1,21 @@
-//  A função "remove()" simplesmente apaga o elemento especificado, bem como todos os seus elementos filhos
-//  A função "empty()" apaga todos os elementos filhos do elemento especificado
+//  Com a função "css()" podemos recuperar ou alterar propriedades dos elementos
+//  Ao alterar uma(s) propriedade(S), usa-se uma chave. O primeiro valor é a propriedade que será alterada e o segundo valor é o valor que será atribuido a propriedade
+//  Utilize como parametro da função "css('propriedade')" o valor que deseja recuperar
+$("#btnVerde").click(() => {
 
-let r,g,b
-let num = 0
+    $("#caixa").css({"background-color":"#0f0", "color":"#f0f"})
 
-$("#btnAdicionar").click(() => {
-
-
-    r = Math.floor(Math.random()*255)
-    g = Math.floor(Math.random()*255)
-    b = Math.floor(Math.random()*255)
-
-    num++
-
-    $("#caixa").append("<div class='subcaixa' id='d"+num+"' style='background-color: rgb("+r+","+g+","+b+")'>"+num+"</div>")
-    
-    $("#msg").text(num)
+    alert($("#caixa").css("background-color"))
 });
 
-$("#btnRemover").click(() => {
+$("#btnVermelho").click(() => {
 
-    $("#d" + num).remove();
+    $("#caixa").css({"background-color":"#f00", "color":"#0ff"})
 
-    num--;
-    
-    $("#msg").text(num);
 });
 
-$("#btnRemoverConteudo").click(() => {
+$("#btnAzul").click(() => {
 
-    $("#caixa").empty();
-
-    num = 0;
+    $("#caixa").css({"background-color":"#00f", "color":"#ff0"})
     
-    $("#msg").text(num);
-
-    $("#caixa").append("<div class='subcaixa' id='d0' style='background-color: rgb(255,255,255)'>0</div>")
 });
