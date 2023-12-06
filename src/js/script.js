@@ -1,45 +1,39 @@
-//  As função "before()" adiciona um elemento antes de outro elemento. Já a função "after()" adiciona depois de outro elemento
+//  A função "remove()" simplesmente apaga o elemento especificado, bem como todos os seus elementos filhos
+//  A função "empty()" apaga todos os elementos filhos do elemento especificado
 
 let r,g,b
 let num = 0
 
-$("#btnAdicionarAntes").click(() => {
+$("#btnAdicionar").click(() => {
 
-    //  Define um número entre 0 e 1, multiplica por 255 e o arredonda para baixo
+
     r = Math.floor(Math.random()*255)
     g = Math.floor(Math.random()*255)
     b = Math.floor(Math.random()*255)
 
     num++
 
-    $("#caixa").before("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'>"+num+"</div>")
-});
-
-$("#btnAdicionarDepois").click(() => {
-
-    for(let i = 0; i < 5; i++){
-
-        r = Math.floor(Math.random()*255)
-        g = Math.floor(Math.random()*255)
-        b = Math.floor(Math.random()*255)
-
-        num++
-
-        $("#caixa").after("<div class='subcaixa' style='background-color: rgb("+r+","+g+","+b+")'>"+num+"</div>")
-    }
-
-});
-
-$("#btnAdicionarTextoAntes").click(() => {
+    $("#caixa").append("<div class='subcaixa' id='d"+num+"' style='background-color: rgb("+r+","+g+","+b+")'>"+num+"</div>")
     
-    $("#caixa2").before(" Curso de jQuery ANTES")
+    $("#msg").text(num)
 });
 
-$("#btnAdicionarTextoDepois").click(() => {
+$("#btnRemover").click(() => {
 
-    for(let i = 0; i < 5; i++){
+    $("#d" + num).remove();
 
-        $("#caixa2").after(" Curso de jQuery DEPOIS")
-    }
+    num--;
+    
+    $("#msg").text(num);
+});
 
+$("#btnRemoverConteudo").click(() => {
+
+    $("#caixa").empty();
+
+    num = 0;
+    
+    $("#msg").text(num);
+
+    $("#caixa").append("<div class='subcaixa' id='d0' style='background-color: rgb(255,255,255)'>0</div>")
 });
