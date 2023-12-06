@@ -1,20 +1,25 @@
-//  A função "hasClass()" retorna true se o elemento selecionado posssui a classe especificada ou retorna false, caso o elemento não possua a classe.
-$(".btnFechar").click((event) => {
-    
-    //  "event.targer.id" retorna o id do elemento que foi clicado. Usa-se o parente para selecionar o seu elemento pai 
-    $("#" + event.target.id).parent().addClass("ocultar")
+//  A função "position()" possui dois atributos que recuperam a posição do elemento
+//  A função "change()" aciona uma ação quando o valor do elemento é alterado
+$("#btnPosicao").click(() => {
+
+    let t = $("#caixa").position().top
+    let l = $("#caixa").position().left
+
+    alert("Top: " + t + " | Left: " + l)
+});
+
+$("#top").change((event) => {
+
+    let valor = document.getElementById(event.target.id).value
+
+    $("#caixa").css({"top":valor+"px"})
 
 });
 
-$("#btnReset").click(() => {
-    
-    let itens = $(".caixa")
+$("#left").change((event) => {
 
-    for (let index = 0; index < itens.length; index++) {
-        
-        if ($(itens[index]).hasClass("ocultar")) {
-            $(itens[index]).removeClass("ocultar")
-        }
-    }
+    let valor = document.getElementById(event.target.id).value
+
+    $("#caixa").css({"left":valor+"px"})
 
 });

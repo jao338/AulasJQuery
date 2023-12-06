@@ -10,32 +10,15 @@
 <body>
 
     <p>
-        <button id="btnReset">Reset</button>
+        <button id="btnPosicao">Posição</button>
+        <br>
+        <label>Topo:</label>
+        <input type="range" name="top" id="top" min="0" max="500">
+        <label>Left:</label>
+        <input type="range" name="left" id="left" min="0" max="500">
     </p>
 
-    <div id="caixas" class="caixas">
-
-        <div id="caixa1" class="caixa" style="background-color: #f00;">
-            <button id="btnFechar1" class="btnFechar">X</button>
-        </div>
-
-        <div id="caixa2" class="caixa" style="background-color: #080;">
-            <button id="btnFechar2" class="btnFechar">X</button>
-        </div>
-
-        <div id="caixa3" class="caixa" style="background-color: #008;">
-            <button id="btnFechar3" class="btnFechar">X</button>
-        </div>
-
-        <div id="caixa4" class="caixa" style="background-color: #880;">
-            <button id="btnFechar4" class="btnFechar">X</button>
-        </div>
-
-        <div id="caixa5" class="caixa" style="background-color: #088;">
-            <button id="btnFechar5" class="btnFechar">X</button>
-        </div>
-
-    </div>
+    <div id="caixa" class="caixa" style="position: absolute; top: 100px; left: 100px; background-color: #f00;"></div>
 
     <script src="/src/js/script.js"></script>
 </body>
